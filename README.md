@@ -1,6 +1,6 @@
-# Getting Started
+# Try API gateway
 
-### Reference Documentation
+### Technology that I aim to use
 
 For further reference, please consider the following sections:
 
