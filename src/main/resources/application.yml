@@ -8,13 +8,14 @@ spring:
       globalcors:
         cors-configurations:
             '[/**]':
-                allowedOrigins: "*"
+                allowedOrigins:
+                  - "http://localhost:3000"
                 allowedMethods:
-                - GET
-                - POST
-                - PUT
-                - DELETE
-                - OPTIONS
+                  - GET
+                  - POST
+                  - PUT
+                  - DELETE
+                  - OPTIONS
                 allowedHeaders: "*"
       routes:
         - id: DEMO-SERVICE
