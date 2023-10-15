@@ -14,3 +14,7 @@ spring:
           uri: http://localhost:9091
           predicates:
             - Path=/api/v1/demo2/graphql/**
+        - id: DEMO-DYNAMIC-CORS-SERVICE
+          uri: http://localhost:9099
+          predicates:
+              - Path=/api/v1/playground/**
