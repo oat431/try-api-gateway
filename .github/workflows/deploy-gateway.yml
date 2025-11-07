@@ -1,0 +1,17 @@
+name: deploy-gateway.yml
+on:
+  push:
+    branches:
+      - release
+
+jobs:
+    deploy:
+        runs-on: [self-hosted]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: server testing
+        run: |
+            echo "Deploying API Gateway Service..." > deploy-gateway.txt
