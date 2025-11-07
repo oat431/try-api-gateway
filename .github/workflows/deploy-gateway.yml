@@ -12,6 +12,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: server testing
+      - name: testing selfhosted runner
         run: |
             echo "Deploying API Gateway Service..." > deploy-gateway.txt
