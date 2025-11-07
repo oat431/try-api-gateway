@@ -1,4 +1,4 @@
-name: deploy-gateway.yml
+name: deploy-gateway
 on:
   push:
     branches:
@@ -6,12 +6,9 @@ on:
 
 jobs:
     deploy:
-        runs-on: [self-hosted]
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: testing selfhosted runner
-        run: |
-            echo "Deploying API Gateway Service..." > deploy-gateway.txt
+      runs-on: [self-hosted]
+      steps:
+        - name : testing server deployment
+          run: echo "deploying gateway service..." > deploy-gateway.txt
+        - name: where this file is located
+          run: pwd > deploy-gateway-path.txt
