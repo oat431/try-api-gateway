@@ -26,7 +26,7 @@ jobs:
       - name: Extract JAR layers
         run: |
           cd build 
-          java -Djarmode=layertools -jar libs/*.jar extract
+          jar -xf .\libs\try-api-gate-way-0.0.1-SNAPSHOT.jar
           cd ..
 
       - name: Build and Deploy with Docker Compose
