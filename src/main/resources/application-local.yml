@@ -4,6 +4,6 @@ eureka:
   client:
     fetchRegistry: true
     serviceUrl:
-      defaultZone: https://disovery.panomete.com/eureka/
+      defaultZone: https://disovery.panomete.com/eureka
     healthcheck:
       enabled: true
