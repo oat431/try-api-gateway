@@ -1,0 +1,9 @@
+eureka:
+  instance:
+    appname: API-GATEWAY-SERVICE
+  client:
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: https://disovery.panomete.com/eureka/
+    healthcheck:
+      enabled: true
