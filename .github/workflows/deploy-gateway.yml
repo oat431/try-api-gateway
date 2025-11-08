@@ -8,7 +8,11 @@ jobs:
     deploy:
       runs-on: [self-hosted]
       steps:
-        - name : testing server deployment
-          run: echo "deploying gateway service..." > deploy-gateway.txt
-        - name: where this file is located
-          run: pwd > deploy-gateway-path.txt
+        - name: checkout code
+        - uses: actions/checkout@v5.0.0
+
+        - name: locate all file
+        - run: la > output.txt
+
+        - name: see dockerfile
+        - run: cat Dockerfile > dockerfile.txt
