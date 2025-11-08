@@ -1,8 +1,8 @@
-FROM openjdk:21-alpine
-RUN addgroup -S spring && adduser -S spring -G spring
+FROM azul/zulu-openjdk:21
+#RUN addgroup -S spring && adduser -S spring -G spring
 EXPOSE 8000
 
-ARG DEPENDENCY=docker
+ARG DEPENDENCY=build
 COPY ${DEPENDENCY}/BOOT-INF/lib /app/lib
 COPY ${DEPENDENCY}/META-INF /app/META-INF
 COPY ${DEPENDENCY}/BOOT-INF/classes /app
