@@ -16,10 +16,10 @@ spring:
       server:
         webflux:
           routes:
-            - id: example-route
-              uri: https://example.org
+            - id: new-identity-service
+              uri: http://panomete-new-identity:8001
               predicates:
-                - Path=/example/**
+                - Path=/api/v1/identity/**
           globalcors:
             cors-configurations:
               '[/**]':
