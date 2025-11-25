@@ -19,7 +19,9 @@ spring:
             - id: new-identity-service
               uri: http://panomete-new-identity:8001
               predicates:
-                - Path=/api/v1/identity/**
+                - Path=/api/v1/identity/actuator/**
+              filters:
+                - RewritePath=/api/v1/identity/(?<remaining>.*), /$\{remaining}
           globalcors:
             cors-configurations:
               '[/**]':
