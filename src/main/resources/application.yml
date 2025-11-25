@@ -16,12 +16,16 @@ spring:
       server:
         webflux:
           routes:
-            - id: new-identity-service
+            - id: new-identity-actuator
               uri: http://panomete-new-identity:8001
               predicates:
                 - Path=/api/v1/identity/actuator/**
               filters:
                 - RewritePath=/api/v1/identity/(?<remaining>.*), /$\{remaining}
+            - id: new-identity-api
+              uri: http://panomete-new-identity:8001
+              predicates:
+                    - Path=/api/v1/identity/**
           globalcors:
             cors-configurations:
               '[/**]':
