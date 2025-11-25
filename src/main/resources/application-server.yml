@@ -1,9 +1,19 @@
 eureka:
   instance:
     appname: API-GATEWAY-SERVICE
+    status-page-url: https://gateway.panomete.com/actuator/info
+    health-check-url: https://gateway.panomete.com/actuator/health
   client:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://panomete-service-discovery:8761/eureka/
     healthcheck:
       enabled: true
+management:
+  info:
+    env:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "health, info, metrics, features"

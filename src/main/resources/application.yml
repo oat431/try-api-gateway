@@ -51,3 +51,8 @@ logging:
     org.hibernate: ERROR
   pattern:
     console: "%clr(%d{${LOG_DATEFORMAT_PATTERN:yyyy-MM-dd HH:mm:ss.SSS Z}}){magenta} |  %clr(${LOG_LEVEL_PATTERN:%-5p}) | %clr(%-40.40logger{39}){cyan} | %clr(%-25.25M){yellow} | %m%n${LOG_EXCEPTION_CONVERSION_WORD:%wEx}"
+info:
+  app:
+    name: Panomete API Gateway
+    description: "Panomete API Gateway"
+    version: 1.0.0
