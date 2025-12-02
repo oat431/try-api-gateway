@@ -1,4 +1,4 @@
-FROM azul/zulu-openjdk:21
+FROM azul/zulu-openjdk:25
 #RUN addgroup -S spring && adduser -S spring -G spring
 EXPOSE 8000
 
